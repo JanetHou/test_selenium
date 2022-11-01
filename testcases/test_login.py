@@ -1,5 +1,6 @@
 # coding:utf-8
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from po.loginpage import LoginPage
 from po.mainpage import MainPage
 from testdata import common_data as c_data
@@ -11,7 +12,7 @@ import sys
 
 class TestLogin:
     def setup(self):
-        options = webdriver.ChromeOptions()
+        options = Options()
         options.add_argument('--headless')  # 浏览器不提供可视化页面. linux下如果系统不支持可视化不加这条会启动失败
         options.add_argument('--no-sandbox')  # 解决DevToolsActivePort文件不存在的报错
         options.add_argument('--disable-dev-shm-usage')  # 客服资源有限的问题
