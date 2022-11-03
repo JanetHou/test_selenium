@@ -13,8 +13,8 @@ import sys
 class TestLogin:
     def setup(self):
         chrome_options = Options()
-        chrome_options.add_argument('--headless')  # 浏览器不提供可视化页面. linux下如果系统不支持可视化不加这条会启动失败
         chrome_options.add_argument('--no-sandbox')  # 解决DevToolsActivePort文件不存在的报错
+        chrome_options.add_argument('--headless')  # 浏览器不提供可视化页面. linux下如果系统不支持可视化不加这条会启动失败
         chrome_options.add_argument('--disable-dev-shm-usage')  # 客服资源有限的问题
         # self.driver = webdriver.Chrome("../chromedriver.exe")
         self.driver=webdriver.Chrome()
