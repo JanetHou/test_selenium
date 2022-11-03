@@ -17,8 +17,7 @@ class TestLogin:
         chrome_options.add_argument('--headless')  # 浏览器不提供可视化页面. linux下如果系统不支持可视化不加这条会启动失败
         chrome_options.add_argument('--disable-dev-shm-usage')  # 客服资源有限的问题
         # self.driver = webdriver.Chrome("../chromedriver.exe")
-        self.driver=webdriver.Chrome()
-        self.driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver", chrome_options=chrome_options)
+        self.driver = webdriver.Chrome(chrome_options=chrome_options)
         self.driver.get(c_data.home_url)
         self.driver.maximize_window()
 
